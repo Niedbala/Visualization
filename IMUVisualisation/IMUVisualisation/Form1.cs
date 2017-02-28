@@ -233,8 +233,14 @@ namespace IMUVisualisation
         int numerpliku = 1;
         private void button4_Click(object sender, EventArgs e)
         {
-            System.IO.File.WriteAllLines(@"C:\Users\Lunatyk\Desktop\TestFolder\WriteLines" + numerpliku.ToString() + ".txt", messageArray);
+            string nazwa = textBox2.Text;
+            System.IO.File.WriteAllLines(@"C:\Users\Lunatyk\Desktop\TestFolder\" + nazwa + ".txt", messageArray);
             numerpliku++;
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
